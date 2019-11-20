@@ -16,11 +16,12 @@ import Foundation
 // Remember that this structure needs to conform to the `Encodable` protocol.
 // Using `Codable` more generally will be useful, as by doing this you'll
 // be able to reuse this struct in Project Three.
-struct Book: Codable {
-    var title: String
-    var author: String
-    var pubYear: String
-    var image: String
+struct Book : Codable{
+    let id: Int?
+    let title: String
+    let author: String
+    let published: String
+    let imageURLString: String
 }
 // MARK: - STEP TWO
 
@@ -29,11 +30,11 @@ struct Book: Codable {
 // have an amusing dataset to work with, each student is requested to
 // create five different books for this database.
 var Books: [Book] = []
-let HarryPotter = Book(title: "Harry Potter and The Sorcerers Stone", author: "J.K.Rolling", pubYear: "2001", image: ".")
-let TheGiver = Book(title: "The Giver", author: "Lowis Lowry", pubYear: "1993", image: "." )
-let MockingBird = Book(title: "To Kill a MockingBird", author: "Harper Lee", pubYear: "2006", image: ".")
-let Narnia = Book(title: "The Chronicles of Narnia", author: "C.S. Lewis", pubYear: "2002", image: ".")
-let Tree = Book(title: "The Giving Tree", author: "Shel Silverstein", pubYear: "1964", image: ".")
+let HarryPotter = Book(id: nil, title: "Harry Potter and The Sorcerers Stone", author: "J.K.Rolling", published: "2001", imageURLString: "https://media.moddb.com/images/downloads/1/112/111205/back2_eng.jpg")
+let TheGiver = Book(id: nil, title: "The Giver", author: "Lowis Lowry", published: "1993", imageURLString: "https://images-na.ssl-images-amazon.com/images/I/51fRar1PvAL._SX300_BO1,204,203,200_.jpg" )
+let MockingBird = Book(id: nil, title: "To Kill a MockingBird", author: "Harper Lee", published: "2006", imageURLString:  "https://upload.wikimedia.org/wikipedia/commons/4/4f/To_Kill_a_Mockingbird_%28first_edition_cover%29.jpg")
+let Narnia = Book(id: nil,title: "The Chronicles of Narnia", author: "C.S. Lewis", published: "2002", imageURLString: "https://cex-thechristianpost.netdna-ssl.com/full/5859/630-0/chronicles-of-narnia.jpg")
+let Tree = Book(id: nil, title: "The Giving Tree", author: "Shel Silverstein", published: "1964", imageURLString: "https://images-na.ssl-images-amazon.com/images/I/41ak9Ds2dWL._SX398_BO1,204,203,200_.jpg")
 
 Books.append(HarryPotter)
 Books.append(TheGiver)
